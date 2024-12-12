@@ -4,18 +4,20 @@ class shape(object):
         
    
 class square(shape):
-    def __init__(self):
+
+    def __init__(self,side):
         super().__init__()
         print("I have 4 sides")
-        
+        self.side=side
+        print(f'Area is: {self.side*self.side}')
+    
 class triangle(shape):
-    def __init__(self):
+    def __init__(self,base,height):
         super().__init__()
         print("I have 3 sides")
-class pentagon(shape):
-    def __init__(self):
-        super().__init__()
-        print("I have 5 sides")
-s=square()
-t=triangle()
-p=pentagon()
+        self.base=base
+        self.height=height
+        print(f'Area is : {1/2*self.base*self.height}')
+
+s=square(4)
+t=triangle(3,5)
